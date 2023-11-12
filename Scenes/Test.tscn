@@ -1,0 +1,484 @@
+[gd_scene load_steps=10 format=3 uid="uid://tn8y0vqhimym"]
+
+[ext_resource type="PackedScene" uid="uid://ccobqflq6lkuy" path="res://Scenes/Block.tscn" id="1_kagnq"]
+[ext_resource type="Script" path="res://Scenes/Test.gd" id="1_tktwx"]
+[ext_resource type="Texture2D" uid="uid://d4bt2us3u0unq" path="res://Assets/element_red_diamond_glossy.png" id="2_7mpwj"]
+[ext_resource type="PackedScene" uid="uid://c56l7dqxb87p2" path="res://Scenes/Ball.tscn" id="2_k0fsf"]
+[ext_resource type="PackedScene" uid="uid://o6erfr7jhk1r" path="res://Scenes/Paddle.tscn" id="4_iao2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cw1k"]
+size = Vector2(16, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmulp"]
+size = Vector2(8.00004, 1152)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni8fp"]
+size = Vector2(1152, 20)
+
+[sub_resource type="Curve2D" id="Curve2D_g5ut4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 56, 576, 0, 0, 0, 0, 1096, 576)
+}
+point_count = 2
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_tktwx")
+
+[node name="Level" type="Node" parent="."]
+
+[node name="Walls" type="Node" parent="Level"]
+
+[node name="LeftWall" type="StaticBody2D" parent="Level/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/LeftWall"]
+position = Vector2(-8, 324)
+shape = SubResource("RectangleShape2D_2cw1k")
+
+[node name="RightWall" type="StaticBody2D" parent="Level/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/RightWall"]
+position = Vector2(1160, 324)
+shape = SubResource("RectangleShape2D_2cw1k")
+
+[node name="Ceiling" type="StaticBody2D" parent="Level/Walls"]
+position = Vector2(-24, -264)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/Ceiling"]
+position = Vector2(260, -600)
+shape = SubResource("RectangleShape2D_jmulp")
+
+[node name="Floor" type="StaticBody2D" parent="Level/Walls"]
+position = Vector2(0, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Walls/Floor"]
+position = Vector2(576, 72)
+shape = SubResource("RectangleShape2D_ni8fp")
+
+[node name="Blocks" type="Node" parent="Level"]
+
+[node name="Block" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 304)
+
+[node name="Block2" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 304)
+
+[node name="Block3" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 304)
+
+[node name="Block4" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 304)
+
+[node name="Block5" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 304)
+
+[node name="Block6" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 304)
+
+[node name="Block7" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 304)
+
+[node name="Block8" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 304)
+
+[node name="Block9" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 304)
+
+[node name="Block10" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 304)
+
+[node name="Block11" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 304)
+
+[node name="Block12" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 304)
+
+[node name="Block13" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 304)
+
+[node name="Block14" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 304)
+
+[node name="Block15" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 304)
+
+[node name="Block16" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 256)
+type = 3
+
+[node name="Block17" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 256)
+type = 3
+
+[node name="Block18" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 256)
+type = 3
+
+[node name="Block19" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 256)
+type = 3
+
+[node name="Block20" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 256)
+type = 3
+
+[node name="Block21" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 256)
+type = 3
+
+[node name="Block22" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 256)
+type = 3
+
+[node name="Block23" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 256)
+type = 3
+
+[node name="Block24" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 256)
+type = 3
+
+[node name="Block25" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 256)
+type = 3
+
+[node name="Block26" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 256)
+type = 3
+
+[node name="Block27" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 256)
+type = 3
+
+[node name="Block28" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 256)
+type = 3
+
+[node name="Block29" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 256)
+type = 3
+
+[node name="Block30" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 256)
+type = 3
+
+[node name="Block31" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 208)
+type = 1
+
+[node name="Block32" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 208)
+type = 1
+
+[node name="Block33" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 208)
+type = 1
+
+[node name="Block34" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 208)
+type = 1
+
+[node name="Block35" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 208)
+type = 1
+
+[node name="Block36" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 208)
+type = 1
+
+[node name="Block37" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 208)
+type = 1
+
+[node name="Block38" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 208)
+type = 1
+
+[node name="Block39" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 208)
+type = 1
+
+[node name="Block40" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 208)
+type = 1
+
+[node name="Block41" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 208)
+type = 1
+
+[node name="Block42" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 208)
+type = 1
+
+[node name="Block43" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 208)
+type = 1
+
+[node name="Block44" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 208)
+type = 1
+
+[node name="Block45" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 208)
+type = 1
+
+[node name="Block46" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 160)
+type = 2
+
+[node name="Block47" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 160)
+type = 2
+
+[node name="Block48" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 160)
+type = 2
+
+[node name="Block49" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 160)
+type = 2
+
+[node name="Block50" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 160)
+type = 2
+
+[node name="Block51" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 160)
+type = 2
+
+[node name="Block52" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 160)
+type = 2
+
+[node name="Block53" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 160)
+type = 2
+
+[node name="Block54" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 160)
+type = 2
+
+[node name="Block55" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 160)
+type = 2
+
+[node name="Block56" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 160)
+type = 2
+
+[node name="Block57" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 160)
+type = 2
+
+[node name="Block58" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 160)
+type = 2
+
+[node name="Block59" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 160)
+type = 2
+
+[node name="Block60" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 160)
+type = 2
+
+[node name="Block61" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 112)
+type = 4
+
+[node name="Block62" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 112)
+type = 4
+
+[node name="Block63" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 112)
+type = 4
+
+[node name="Block64" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 112)
+type = 4
+
+[node name="Block65" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 112)
+type = 4
+
+[node name="Block66" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 112)
+type = 4
+
+[node name="Block67" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 112)
+type = 4
+
+[node name="Block68" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 112)
+type = 4
+
+[node name="Block69" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 112)
+type = 4
+
+[node name="Block70" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 112)
+type = 4
+
+[node name="Block71" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 112)
+type = 4
+
+[node name="Block72" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 112)
+type = 4
+
+[node name="Block73" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 112)
+type = 4
+
+[node name="Block74" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 112)
+type = 4
+
+[node name="Block75" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 112)
+type = 4
+
+[node name="Block76" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(72, 64)
+type = 5
+
+[node name="Block77" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(144, 64)
+type = 5
+
+[node name="Block78" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(216, 64)
+type = 5
+
+[node name="Block79" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(288, 64)
+type = 5
+
+[node name="Block80" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(360, 64)
+type = 5
+
+[node name="Block81" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(432, 64)
+type = 5
+
+[node name="Block82" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(504, 64)
+type = 5
+
+[node name="Block83" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(576, 64)
+type = 5
+
+[node name="Block84" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(648, 64)
+type = 5
+
+[node name="Block85" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(720, 64)
+type = 5
+
+[node name="Block86" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(792, 64)
+type = 5
+
+[node name="Block87" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(864, 64)
+type = 5
+
+[node name="Block88" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(936, 64)
+type = 5
+
+[node name="Block89" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1008, 64)
+type = 5
+
+[node name="Block90" parent="Level/Blocks" instance=ExtResource("1_kagnq")]
+position = Vector2(1080, 64)
+type = 5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 320)
+
+[node name="Ball" parent="." instance=ExtResource("2_k0fsf")]
+position = Vector2(576, 544)
+lock_rotation = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ScoreContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -26.0
+offset_right = 76.0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ScoreContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="UI/ScoreContainer/HBoxContainer"]
+layout_mode = 2
+text = "Score: "
+
+[node name="ScoreValue" type="Label" parent="UI/ScoreContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="LifeContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/LifeContainer"]
+layout_mode = 2
+
+[node name="LivesLabel" type="Label" parent="UI/LifeContainer/HBoxContainer"]
+layout_mode = 2
+text = "Lives: "
+
+[node name="TextureRect" type="TextureRect" parent="UI/LifeContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_7mpwj")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="UI/LifeContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_7mpwj")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="UI/LifeContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_7mpwj")
+expand_mode = 3
+
+[node name="Paddle" parent="." instance=ExtResource("4_iao2f")]
+position = Vector2(576, 576)
+script = null
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_g5ut4")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(576, 576)
+progress = 520.0
+rotates = false
+loop = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Path2D/PathFollow2D"]
+remote_path = NodePath("../../../Paddle")
+
+[connection signal="body_entered" from="Ball" to="." method="_on_ball_body_entered"]

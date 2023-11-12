@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccobqflq6lkuy"]
+
+[ext_resource type="Script" path="res://Scenes/Block.gd" id="1_on8lq"]
+[ext_resource type="Texture2D" uid="uid://deexdtilacpaj" path="res://Assets/element_blue_rectangle_glossy.png" id="1_u1bwu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gneis"]
+size = Vector2(64, 32)
+
+[node name="Block" type="StaticBody2D"]
+script = ExtResource("1_on8lq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gneis")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u1bwu")
